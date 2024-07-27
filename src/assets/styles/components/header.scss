@@ -1,0 +1,17 @@
+.header{
+    background-color: #fff;
+    &__box{
+        padding: 1% 0px;
+        display: flex;
+        align-items: center;
+    }
+    &__logo{
+        font-size: 28px;
+        font-weight: 500;
+        margin-left: 100px; 
+        img {
+            width: 300px;
+        }
+    }
+    
+}
