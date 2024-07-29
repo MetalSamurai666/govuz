@@ -27,7 +27,9 @@
         border-radius: 20px;
         margin: 40px 0px;
     }
-
+    table {
+        width: 100%;
+    }
     .tg  {
         border-collapse:collapse;
         border-spacing:0;
@@ -70,6 +72,20 @@
         }
         .link {
             text-decoration: underline;
+        }
+    }
+
+    @media (max-width: 1024px) {
+        &__table {
+            overflow: auto;
+        }
+        table {
+            width: auto;
+        }
+    }
+    @media (max-width: 500px) {
+        &__body {
+            padding: 30px;
         }
     }
 }

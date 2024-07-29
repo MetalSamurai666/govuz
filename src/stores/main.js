@@ -2,9 +2,9 @@ import { ref, computed } from 'vue'
 import { defineStore } from 'pinia'
 import axios from 'axios'
 
-
 export const useMainStore = defineStore('main', () => {
   const url = ref('https://api.trm.uz')
+  const comments = ref()
   
   const getAllDiscussions = () => {
     return axios(url.value+`/discussion`)
@@ -16,9 +16,14 @@ export const useMainStore = defineStore('main', () => {
     .catch(er => console.log(er))
   }
 
-  const getAllComments = () => {
-    return axios(url.value+`/comment`)
-    .catch(er => console.log(er))
+  const getAllComments = async () => {
+    const res = await axios(url.value+`/comment`)
+    if (res.status === 200) {
+      console.log(res.data)
+      comments.value = res.data
+    }
+    console.log(comments.value)
+    // .catch(er => console.log(er))
   }
 
   async function sendComment(params) {
@@ -40,5 +45,5 @@ export const useMainStore = defineStore('main', () => {
     })
   }
 
-  return { url, getAllDiscussions, getDiscussion, getAllComments, sendComment }
+  return { url, comments, getAllDiscussions, getDiscussion, getAllComments, sendComment }
 })

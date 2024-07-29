@@ -13,7 +13,7 @@
             console.log(list.value)
         }
     }
-    
+
     onMounted(() => {
         getData()
     })
@@ -34,7 +34,7 @@
                 </div> -->
 
                 <div class="window__table">
-                    <table class="tg" style="table-layout: fixed; width: 100%">
+                    <table class="tg" style="table-layout: fixed;">
                         <colgroup>
                             <col style="width: 50px;">
                             <col >

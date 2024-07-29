@@ -5,13 +5,13 @@
     <div class="header">
         <div class="container">
             <div class="header__box">
-                <div class="header__menu">
+                <!-- <div class="header__menu">
                     <button><img src="@/assets/logo/bars.svg"></button>
-                </div>
+                </div> -->
 
-                <div class="header__logo">
+                <router-link to="/" class="header__logo">
                     <img src="@/assets/logo.png">
-                </div>
+                </router-link>
                 
                 <!-- <div class="header__btn">
                     <router-link to="/">

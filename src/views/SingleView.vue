@@ -9,7 +9,4 @@ import infoComp from '@/components/default/infoComp.vue';
 </template>
 
 <style lang="scss">
-.single { 
-    padding: 40px 0px;
-}
 </style>
